@@ -1,5 +1,24 @@
 set nocompatible               " be iMproved
 filetype off                   " required!
+set fenc=utf-8			"文字コード
+set nobackup			"バックアップファイル作成しない
+set noswapfile			"スワップファイル作成しない
+set autoread			"ファイル編集自動読み込み
+set hidden
+set showcmd
+set cursorline
+set virtualedit=onemore
+set smartindent
+set showmatch
+set laststatus=2
+set wildmode=list:longest
+" 折り返し時に表示行単位での移動できるようにする
+nnoremap j gj
+nnoremap k gk
+set list listchars=tab:\▸\-
+set tabstop=2
+set shiftwidth=2
+
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 " let Vundle manage Vundle
@@ -33,3 +52,5 @@ filetype plugin indent on     " required!
 set number
 :command! Nu set relativenumber
 :command! NU set relativenumber!
+"コード色つけ"
+:syntax on

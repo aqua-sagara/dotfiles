@@ -1,4 +1,6 @@
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+alias ls='gls --color=auto'
+source ~/internalShell/internal.sh
 
 function powerline_precmd() {
     PS1="$(powerline-shell --shell zsh $?)"
