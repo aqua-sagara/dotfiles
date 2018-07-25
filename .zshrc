@@ -1,4 +1,6 @@
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export ZPLUG_HOME=/usr/local/opt/zplug
+  source $ZPLUG_HOME/init.zsh
 alias ls='gls --color=auto'
 source ~/internalShell/internal.sh
 
