@@ -17,7 +17,7 @@ nnoremap j gj
 nnoremap k gk
 set list listchars=tab:\▸\-
 set tabstop=2
-set shiftwidth=2
+
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
@@ -54,3 +54,13 @@ set number
 :command! NU set relativenumber!
 "コード色つけ"
 :syntax on
+
+" 矢印キーを無効にする
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
+inoremap <Up> <Nop>
+inoremap <Down> <Nop>
+inoremap <Left> <Nop>
+inoremap <Right> <Nop>

@@ -1,5 +1,7 @@
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 alias ls='gls --color=auto'
+#変数設定
+COLOSUKE="git.colopl.jp/colosuke"
 source ~/internalShell/internal.sh
 
 function powerline_precmd() {
