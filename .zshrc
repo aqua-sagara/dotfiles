@@ -22,6 +22,10 @@ if [ "$TERM" != "linux" ]; then
 fi
 # zplug
 source ~/.zplug/init.zsh
+# zplug settings
+export ZPLUG_HOME=/usr/local/opt/zplug
+source $ZPLUG_HOME/init.zsh
+
 # 構文のハイライト(https://github.com/zsh-users/zsh-syntax-highlighting)
 zplug "zsh-users/zsh-syntax-highlighting"
 
