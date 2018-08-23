@@ -1,9 +1,9 @@
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 alias ls='gls --color=auto'
 #変数設定
-COLOSUKE="git.colopl.jp/colosuke"
 source ~/internalShell/internal.sh
-
+export GOPATH=$HOME/.go
+export PATH=$PATH:$GOPATH/bin
 function powerline_precmd() {
     PS1="$(powerline-shell --shell zsh $?)"
 }
