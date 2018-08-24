@@ -18,6 +18,15 @@ nnoremap k gk
 set list listchars=tab:\▸\-
 set tabstop=2
 
+"インデント
+set tabstop=4
+set shiftwidth=4
+set noexpandtab
+"php dictionary読み込み
+autocmd FileType php,ctp :set dictionary=~/dotfiles/.vim/dict/php.dict
+highlight Pmenu ctermbg=4
+highlight PmenuSel ctermbg=1
+highlight PMenuSbar ctermbg=4
 "vim-plug
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
 call plug#begin()
