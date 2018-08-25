@@ -18,7 +18,42 @@ nnoremap k gk
 set list listchars=tab:\▸\-
 set tabstop=2
 
+"インデント
+set tabstop=4
+set shiftwidth=4
+set noexpandtab
+"php dictionary読み込み
+autocmd FileType php,ctp :set dictionary=~/dotfiles/.vim/dict/php.dict
+highlight Pmenu ctermbg=4
+highlight PmenuSel ctermbg=1
+highlight PMenuSbar ctermbg=4
+"vim-plug
+nnoremap <silent><C-e> :NERDTreeToggle<CR>
+call plug#begin()
+Plug 'tpope/vim-sensible'
+Plug 'edkolev/promptline.vim'
+Plug '/usr/local/opt/fzf'
+Plug 'vim-airline/vim-airline'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'scrooloose/nerdtree', { 'on':  ['NERDTreeToggle'] }
+" Vundle/NeoBundle と同じように
+Plug 'junegunn/seoul256.vim'
+" 指定したファイルタイプを開いたときに読み込む
+Plug 'tpope/vim-fireplace', { 'for': ['clojure'] }
+let g:fzf_action = {
+  \ 'ctrl-t': 'tab split',
+  \ 'ctrl-x': 'split',
+  \ 'ctrl-v': 'vsplit' }
+call plug#end()
 
+function! s:fzf_statusline()
+				 "  Override statusline as you like
+					   highlight fzf1 ctermfg=161 ctermbg=251
+					     highlight fzf2 ctermfg=23 ctermbg=251
+					       highlight fzf3 ctermfg=237 ctermbg=251
+					         setlocal statusline=%#fzf1#\ >\ %#fzf2#fz%#fzf3#f
+					         endfunction
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 " let Vundle manage Vundle
