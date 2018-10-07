@@ -1,9 +1,11 @@
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-alias ls='gls --color=auto'
 #変数設定
+localectl set-locale LANG=ja_JP.UTF-8
 source ~/internalShell/internal.sh
 export GOPATH=$HOME/.go
 export PATH=$PATH:$GOPATH/bin
+export PATH=~/.local/bin/:$PATH
+export ZPLUG_HOME=~/dotfiles/.zplug
 function powerline_precmd() {
     PS1="$(powerline-shell --shell zsh $?)"
 }
@@ -23,7 +25,6 @@ fi
 # zplug
 source ~/.zplug/init.zsh
 # zplug settings
-export ZPLUG_HOME=/usr/local/opt/zplug
 source $ZPLUG_HOME/init.zsh
 
 # 構文のハイライト(https://github.com/zsh-users/zsh-syntax-highlighting)

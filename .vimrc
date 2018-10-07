@@ -12,6 +12,17 @@ set smartindent
 set showmatch
 set laststatus=2
 set wildmode=list:longest
+" install vim-pulg                                                                                                                                        
+ if has('vim_starting')
+   set rtp+=~/.vim/plugged/vim-plug
+     if !isdirectory(expand('~/.vim/plugged/vim-plug'))
+         echo 'install vim-plug...'
+             call system('mkdir -p ~/.vim/plugged/vim-plug')
+                 call system('
+                 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+				     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim')
+                   end
+                   endif
 " 折り返し時に表示行単位での移動できるようにする
 nnoremap j gj
 nnoremap k gk
